@@ -1,0 +1,201 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Layout/_Admin.cshtml";
+}
+@section scripts{
+    <script src="~/js/Scripts/controllers/TaiKhoanController.js"></script>
+}
+<div class="title">
+    <h4>Quản lý tài khoản và phân quyền</h4>
+</div>
+<div class="row">
+    <div class="add-item">
+        <a class="btn btn-default" href="#" id="btn-add" role="button">Thêm tài khoản</a>
+    </div>
+    <div class="search">
+        <select name="" id="pageSize" class="text-inline-select">
+            <option value="5">5 rows</option>
+            <option value="10">10 rows</option>
+            <option value="20">20 rows</option>
+        </select>
+        <input type="text" id="search" class="text-inline-input" placeholder="&#xF002; Nhập tên tài khoản...">
+
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Tên tài khoản</th>
+                    <th>Tên nhân viên</th>
+                    <th>Quyền</th>
+                    <th>Trạng thái tài khoản</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tblData"></tbody>
+        </table>
+        <script id="data-template" type="x-tmpl-mustache">
+            <tr>
+                <td>{{TaiKhoan}}</td>
+                <td>{{Ten}}</td>
+                <td>{{TenQuyen}}</td>
+                <td>{{TrangThai}}</td>
+                <td>
+                    <button type="button" class="fas fa-pen blue btn-update" data-id="{{Id}}" title="Click để xem chi tiết và cập nhật thông tin"></button>
+                    
+                </td>
+            </tr>
+        </script>
+    </div>
+    <div id="pagination" style="text-align:center"></div>
+</div>
+<div class="footer">
+    <h5>&copy; BookStore Management. All right reserved.</h5>
+</div>
+<div id="account-detail" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form id="frm-update">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Chi tiết tài khoản</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row" id="detail-content">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger modal-btn" data-dismiss="modal">Đóng</button>
+                    <button id="btn-update-account" type="submit" class="btn btn-success modal-btn" >Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script id="detail-template" type="x-tmpl-mustache">
+    <div class="col-sm-6">
+        <h3>Thông tin nhân viên</h3>
+        <div class="form-group">
+            <label class="modal-label">Tên nhân viên :</label>
+            <input type="text" id="txtTen" name="txtTen" value="{{Ten}}" class="form-control modal-input">
+        </div>
+        <div class="form-group">
+            <label class="modal-label">Email :</label>
+            <input type="text" id="txtEmail"  name="txtEmail" value="{{Email}}" class="form-control modal-input">
+        </div>
+        <div class="form-group">
+            <label class="modal-label">Số điện thoại :</label>
+            <input type="text" id="txtSoDienThoai"  name="txtSoDienThoai" value="{{SoDienThoai}}" class="form-control modal-input">
+        </div>
+        <div class="form-group">
+            <label class="modal-label">Địa chỉ :</label>
+            <input type="text" id="txtDiaChi"  name="txtDiaChi" value="{{DiaChi}}" class="form-control modal-input">
+        </div>
+
+    </div>
+    <div class="col-sm-6">
+        <h3>Thông tin tài khoản</h3>
+        <div class="form-group">
+            <label class="modal-label">Tên tài khoản :</label>
+            <input type="text" value="{{TaiKhoan}}" class="form-control modal-input" disabled>
+        </div>
+        <div class="form-group">
+            <label class="modal-label">Mật khẩu :</label>
+            <input type="password" value="{{MatKhau}}" class="form-control modal-input" disabled>
+        </div>
+        <div class="form-group">
+            <label class="modal-label">Quyền :</label>
+            <select id="account-role"  name="txtQuyen" data-role="{{IdQuyen}}" class="form-control modal-input">
+                @foreach (var item in ViewBag.listRoles)
+                {
+                    <option value="@item.Id">@item.TenQuyen</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="modal-label">Trạng thái tài khoản :</label>
+            <select data-stt="{{TrangThai}}"  name="txtTrangThai" id="account-status" class="form-control modal-input">
+                @foreach(var item in ViewBag.listAccountStatus)
+                {
+                    <option value="@item.TrangThai">@item.TenTrangThai</option>
+                }
+            </select>
+        </div>
+    </div>
+</script>
+<div id="account-create" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form id="frm-create">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Tạo tài khoản mới</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row" id="detail-content">
+                        <div class="col-sm-6">
+                            <h3>Thông tin nhân viên</h3>
+                            <div class="form-group">
+                                <label class="modal-label">Tên nhân viên :</label>
+                                <input type="text" id="createTen" name="createTen"  class="form-control modal-input">
+                            </div>
+                            <div class="form-group">
+                                <label class="modal-label">Email :</label>
+                                <input type="text" id="createEmail" name="createEmail"  class="form-control modal-input">
+                            </div>
+                            <div class="form-group">
+                                <label class="modal-label">Số điện thoại :</label>
+                                <input type="text" id="createSoDienThoai" name="createSoDienThoai"  class="form-control modal-input">
+                            </div>
+                            <div class="form-group">
+                                <label class="modal-label">Địa chỉ :</label>
+                                <input type="text" id="createDiaChi" name="createDiaChi"  class="form-control modal-input">
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <h3>Thông tin tài khoản</h3>
+                            <div class="form-group">
+                                <label class="modal-label">Tên tài khoản :</label>
+                                <input type="text" id="createTaiKhoan" name="createTaiKhoan" class="form-control modal-input">
+                            </div>
+                            <div class="form-group">
+                                <label class="modal-label">Mật khẩu :</label>
+                                <input type="password" id="createMatKhau" name="createMatKhau" class="form-control modal-input">
+                            </div>
+                            <div class="form-group">
+                                <label class="modal-label">Nhập lại mật khẩu :</label>
+                                <input type="password" id="createReMatKhau" name="createReMatKhau" class="form-control modal-input">
+                            </div>
+                            <div class="form-group">
+                                <label class="modal-label">Quyền :</label>
+                                <select id="createQuyen" name="createQuyen" class="form-control modal-input">
+                                    @foreach (var item in ViewBag.listRoles)
+                                    {
+                                        <option value="@item.Id">@item.TenQuyen</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="modal-label">Trạng thái tài khoản :</label>
+                                <select name="createTrangThai" id="createTrangThai" class="form-control modal-input">
+                                    @foreach (var item in ViewBag.listAccountStatus)
+                                    {
+                                        <option value="@item.TrangThai">@item.TenTrangThai</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger modal-btn" data-dismiss="modal">Đóng</button>
+                    <button id="btn-create-account" type="submit" class="btn btn-success modal-btn">Tạo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

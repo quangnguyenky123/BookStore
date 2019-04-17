@@ -1,0 +1,93 @@
+label{
+    margin-top: 10px;
+}
+/* #lblChonHinh{
+    border:1px solid rgb(102, 102, 255);
+    color:rgb(102, 102, 255);
+} */
+#btnQuayLai{
+    background-color: #EC5854;
+    border: 1px solid #EC5854;
+    color:white;
+}
+#btnQuayLai:focus{
+    background-color: rgb(173, 9, 14);
+    border:1px solid rgb(173, 9, 14);
+}
+#btnTao{
+    background-color: #47C18F;
+    border: 1px solid #47C18F;
+    color:white;
+}
+#btnTao:focus{
+    background-color: rgb(3, 102, 61);
+        border:1px solid rgb(3, 102, 61);
+}
+  label > input[type=file] {
+      display: none;
+  }
+  .text-inline{
+    
+    border: 1px solid rgb(114, 190, 224);
+    
+    text-align: left;
+    height: 30px;
+    width: 100%;
+}
+#form-left,#form-right,#form-button{
+    padding-top: 15px;
+}
+#form-left,#form-right{
+    margin-left: -15px;
+}
+#form-button{
+    margin-left: -15px;
+}
+.row{
+    width:80%;
+}
+img{
+    width: 180px;
+    height: 280px;
+}
+.error{
+    color: #EC5854;
+}
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border:1px solid rgb(102, 102, 255);
+    color:rgb(102, 102, 255);
+    padding: 7px;
+    left:-5px;
+    border-radius: 5px;
+  }
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }  
+  .form-lbl{
+      color: black;
+  }
+  .book-img{
+      margin-top: 16px;
+      width: 250px;
+      height: 350px;
+  }
+  #image{
+      margin-top:35px;
+  }
+  #btn-choose{
+      color: rgb(49, 170, 226);
+      margin-top: 20px;
+      background-color: white;
+      border: 1px solid rgb(91, 177, 218);
+      border-radius: 4px;
+  }
+  .form-btn{
+      min-width: 80px;
+  }

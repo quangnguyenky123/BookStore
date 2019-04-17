@@ -1,0 +1,22 @@
+.pagination{
+    text-align: center;
+    width: 100%;
+}
+#select-page{
+    align-content: center;
+    width: 100%;
+    
+}
+#select-page button{
+    color: black;
+    border:1px solid transparent;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    outline:none;
+}
+#select-page button:focus{
+    background-color:	#33B3ED;
+    outline:none;
+  }

@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, , initial-scale=1.0">
+
+    <title>Book Store</title>
+    <script>
+        if (navigator.userAgent.match(/Android/i)) {
+            var viewport = document.querySelector("meta[name=viewport]");
+        }
+        if (navigator.userAgent.match(/Android/i)) {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <link href="~/user/stylesheet/bootstrap.css" rel="stylesheet" />
+    <link href="~/user/stylesheet/cloud-zoom.css" rel="stylesheet" />
+    <link href="~/user/stylesheet/stylesheet.css" rel="stylesheet" />
+    <link href="~/user/stylesheet/font-awesome.css" rel="stylesheet" />
+    <link href="~/user/stylesheet/slideshow.css" rel="stylesheet" />
+    <link href="~/user/stylesheet/jquery.prettyPhoto.css" rel="stylesheet" />
+    <link href="~/user/stylesheet/camera.css" rel="stylesheet" />
+    <link href="~/user/stylesheet/superfish.css" rel="stylesheet" />
+    <link href="~/user/stylesheet/photoswipe.css" rel="stylesheet" />
+    <link href="~/user/stylesheet/jquery.bxslider.css" rel="stylesheet" />
+    <link href="~/user/stylesheet/colorbox.css" rel="stylesheet" />
+    <link href="~/user/stylesheet/responsive.css" rel="stylesheet" />
+    <link href="~/user/stylesheet/custom.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Cabin:400,500,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous">
+
+
+    <script type="text/javascript" src="~/user/js/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="~/user/js/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="~/user/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="~/user/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/user/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" />
+    <script type="text/javascript" src="~/user/jquery/ui/external/jquery.cookie.js"></script>
+    <script type="text/javascript" src="~/user/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/user/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+    <script type="text/javascript" src="~/user/js/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="~/user/jquery/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="~/user/jquery/jquery.cycle.js"></script>
+
+    <script type="text/javascript" src="~/user/js/bootstrap/bootstrap.js"></script>
+    <script type="text/javascript" src="~/user/jquery/tabs.js"></script>
+
+    <script type="text/javascript" src="~/user/js/jQuery.equalHeights.js"></script>
+    <script type="text/JavaScript" src="~/user/js/elevate/jquery.elevatezoom.js"></script>
+    <script type="text/javascript" src="~/user/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="~/user/js/jscript_zjquery.anythingslider.js"></script>
+    <script type="text/javascript" src="~/user/jquery/nivo-slider/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript" src="~/user/js/jquery.mobile-events.js"></script>
+    <script type="text/javascript" src="~/user/js/superfish.js"></script>
+    <script type="text/javascript" src="~/user/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+
+
+    <!-- bx-slider -->
+    <script type="text/javascript" language="javascript" src="~/user/js/bxslider/jquery.bxslider.js"></script>
+    <!-- photo swipe -->
+    @*<script type="text/javascript" language="javascript" src="~/user/js/photo-swipe/klass.min.js"></script>*@
+    @*<script type="text/javascript" language="javascript" src="~/user/js/photo-swipe/code.photoswipe.jquery-3.0.5.js"></script>*@
+    <link rel="stylesheet" type="text/css" href="~/user/stylesheet/livesearch.css" />
+
+
+</head>
+
+<body class="common-home">
+    <div class="swipe-left"></div>
+    <div id="body">
+        <div class="swipe">
+            <div class="swipe-menu">
+                <ul class="links">
+                    <li class="first"><a class="active"><i class="fa fa-home"></i>Trang chủ</a></li>
+                    <li id="li-login-status"></li>
+                    @*@{
+                            if (Session["username"] == null)
+                            {
+
+                                <li class="li-logout" hidden><a class="logout"><i class="fa fa-sign-out-alt"></i>(@Session["username"])Đăng xuất</a></li>
+                                <li class="li-login"><a href="@Url.Action("Login","Home")" class="login"><i class="fa fa-sign-in-alt"></i>Đăng nhập</a></li>
+                                <li class="profile" hidden><a><i class="fa fa-info-circle"></i>Thông tin cá nhân</a></li>
+                                <li class="history" hidden><a><i class="fa fa-history"></i>Lịch sử mượn sách</a></li>
+                                <li hidden><a class="" href="@Url.Action("Index","Admin/Home")"><i class="fa fa-ad"></i>Quản trị</a></li>
+                            }
+                            else
+                            {
+                                <li class="profile"><a><i class="fa fa-info-circle"></i>Thông tin cá nhân</a></li>
+                                <li class="history"><a><i class="fa fa-history"></i>Lịch sử mượn sách</a></li>
+                                <li><a class="" href="@Url.Action("Index","Admin/Home")"><i class="fa fa-ad"></i>Quản trị</a></li>
+                                <li class="li-logout"><a href="@Url.Action("Logout","Home")" class="logout"><i class="fa fa-sign-out-alt"></i>(@Session["username"])Đăng xuất</a></li>
+                                <li class="li-login" hidden><a class="login"><i class="fa fa-sign-in-alt"></i>Đăng nhập</a></li>
+
+                            }
+                        }*@
+                </ul>
+            </div>
+        </div>
+        <div id="page">
+            <div id="shadow">
+                <div class="shadow"></div>
+                <header id="header">
+                    <div class="top-line">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="toprow">
+                                        <ul class="links">
+                                            <li class="first">
+                                                <a class="active">
+                                                    <i class="fas fa-home"></i>Trang
+                                                    chủ
+                                                </a>
+                                            </li>
+                                            @*@{
+                                                    if (Session["username"] != null)
+                                                    {
+                                                        <li class="profile"><a><i class="fa fa-info-circle"></i>Thông tin cá nhân</a></li>
+                                                        <li class="history"><a><i class="fa fa-user"></i>Lịch sử mượn sách</a></li>
+                                                        <li><a class="admin" href="@Url.Action("Index","Admin/Home")"><i class="fa fa-user"></i>Quản trị</a></li>
+                                                    }
+                                                    else
+                                                    {
+                                                        <li class="profile" hidden><a><i class="fa fa-info-circle"></i>Thông tin cá nhân</a></li>
+                                                        <li class="history" hidden><a><i class="fa fa-user"></i>Lịch sử mượn sách</a></li>
+                                                        <li hidden><a class="admin" href="@Url.Action("Index","Admin/Home")"><i class="fa fa-user"></i>Quản trị</a></li>
+                                                    }
+                                                }*@
+
+                                        </ul>
+                                        <div class="clear"></div>
+                                    </div>
+
+                                    <div style="float:right" class="toprow">
+                                        <ul style="float:right" class="links">
+                                            @*@{
+                                                    if (Session["username"] != null)
+                                                    {
+                                                        <li style="float:right ;margin-top:1px" class="li-login" hidden><a class="login"><i class="fa fa-shopping-cart"></i>Đăng nhập</a></li>
+                                                        <li style="float:right;margin-top:1px" class="li-logout"><a href="@Url.Action("Logout","Home")" class="logout"><i class="fa fa-check"></i>(<b id='hold-session'>@Session["username"]</b>)Đăng xuất</a></li>
+                                                    }
+                                                    else
+                                                    {
+                                                        <li style="float:right;margin-top:1px" class="li-login"><a href="@Url.Action("Login","Home")" class="login"><i class="fa fa-shopping-cart"></i>Đăng nhập</a></li>
+                                                        <li style="float:right ;margin-top:0.8px" class="li-logout" hidden><a class="logout"><i class="fa fa-check"></i>(@Session["username"])Đăng xuất</a></li>
+
+                                                    }
+                                                }*@
+
+                                        </ul>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="cart-position">
+                                        <div class="cart-inner">
+                                            <div id="cart">
+                                                <div class="heading">
+                                                    <span class="link_a">
+                                                        <i class="fa fa-shopping-cart mycart"></i>
+                                                        <b class="mycart">Giỏ hàng:</b>
+
+                                                        <span class="mycart" id="cart-total2">0</span>
+                                                        <span class="mycart" id="cart-total">0 sách</span>
+                                                        <span class="clear"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top_color">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+
+                                    <div id="logo">
+                                        <a style="text-transform: uppercase; font-size: 120px;">
+                                            <h1 style="font-size: 40px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+                                                Book<b style="color: brown;">Store</b>
+                                            </h1>
+                                        </a>
+                                    </div>
+
+                                    <div id="search">
+                                        <div class="inner">
+                                            <div id="btn-search" class="button-search">
+                                                <i class="fa fa-search"></i>
+                                                <span>Tìm kiếm</span>
+                                            </div>
+                                            <input id="input-search" type="text" name="search" placeholder="Nhập tên sách" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="toprow-1">
+                                    <a class="swipe-control"><i class="fa fa-align-justify"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="smenu" class="row">
+                            <div class="col-sm-12">
+                                <div id="menu-gadget">
+                                    <div id="menu-icon">Danh mục sách</div>
+                                    <ul id="nav" class="sf-menu-phone">
+                                        <li class="button_sale all-book "><a><b>Tất cả</b></a></li>
+                                        @{
+                                            foreach (var cate in ViewBag.ListCategoryAll)
+                                            {
+                                                <li class="cate-list" data-id="@cate.Id">
+                                                    <a>@cate.TenDanhMuc</a>
+                                                </li>
+                                            }
+                                        }
+
+
+                                    </ul>
+                                </div>
+
+                                <div id="menu">
+                                    <ul class="row sf-menu">
+                                        <li style="text-align: center; padding-right: 0px; padding-left: 0px;margin-right:5px;" class="col-sm-1 button_sale cate">
+                                            <a style="padding-left: 20px;width: 100%;padding-right: 20px;" class="cate-item all-book">
+                                                <b>Tất cả</b>
+                                            </a>
+                                        </li>
+
+                                        @{
+                                            foreach (var cate in ViewBag.ListCategoryDisplay)
+                                            {
+                                                <li style="text-align: center;padding-left: 0px;padding-right: 0px;margin-left:0px;margin-right:5px;" class="col-sm-2 cate cate-list" data-id="@cate.Id">
+                                                    <a style="width:100%;padding-left:0px;;padding-right:0px;">@cate.TenDanhMuc</a>
+                                                </li>
+                                            }
+                                        }
+                                        <li title="Xem nhiều hơn" style="text-align: center; padding-right: 0px; padding-left: 0px;margin-left:0px;" class="col-sm-1 button_sale cate more-cate">
+                                            <a style="padding-left: 20px;width: 100%;padding-right: 20px;" class="cate-item">
+                                                <i class="fas fa-plus"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <section>
+                    @RenderBody()
+                    <div class="clear"></div>
+                </section>
+                <footer>
+                    @*<div class="footer-top">
+                            <div class="container">
+
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h3>Thông tin</h3>
+                                        <ul>
+                                            <li><a href="#">Giúp đỡ</a></li>
+                                            <li><a href="#">Chính sách</a></li>
+                                            <li><a href="#">Nội quy thư viện</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h3>Dịch vụ</h3>
+                                        <ul>
+                                            <li><a href="#">Sách yêu thích nhất</a></li>
+                                            <li><a href="#">Sách mới về</a></li>
+                                            <li><a href="#"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h3>Liên hệ</h3>
+                                        <ul>
+                                            <li><a href="#">Admin : admin@fsoft.com.vn</a></li>
+                                            <li><a href="#">Hotline : 09887665454</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h3>Tài khoản</h3>
+                                        <ul>
+                                            <li><a href="#">Thông tin cá nhân</a></li>
+                                            <li><a href="#">Lịch sử mượn sách</a></li>
+                                            <li><a href="#">Danh sách yêu thích</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>*@
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div id="powered">
+                                    <span>©  BookStore Management. All right reserved.<br /></span>
+
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Giỏ hàng của bạn</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div id="all-item" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <table id="cart-content" class="table" style="color:black">
+                                <thead>
+                                    <tr>
+                                        <th>Tên sách</th>
+                                        <th>Số lượng</th>
+                                        <th>Đơn giá</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <hr />
+                            <div id="price-cart" style="float:right;color:black;font-size:20px;">
+                                <span>Tổng tiền :&nbsp;<b id="total-price">0&nbsp;<u>đ</u></b></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger modal-btn" data-dismiss="modal">Tiếp tục mua sách</button>
+                    <button id="btn-pay" type="button" class="btn btn-success modal-btn">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="user-info-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <form id="frm-info">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Thông tin khách hàng</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <label id="txt-id" data-id="" hidden></label>
+                                <div class="form-group">
+                                    <label for="txt-username">Tên khách hàng</label>
+                                    <input type="text" class="form-control" name="txt-username" id="txt-username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt-phone">Số điện thoại</label>
+                                    <input type="text" class="form-control" id="txt-phone" name="txt-phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt-address">Địa chỉ</label>
+                                    <input type="text" class="form-control" id="txt-address" name="txt-address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt-email">Email</label>
+                                    <input type="text" class="form-control" id="txt-email" name="txt-email">
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger modal-btn" data-dismiss="modal">Hủy</button>
+                        <button id="btn-confirm" type="submit" class="btn btn-success modal-btn">Xác nhận</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="list-cate-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Danh mục sách</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul style="padding-left: 40px;font-size:15px;" class="row">
+                            @{
+                                foreach (var cate in ViewBag.ListCategoryAll)
+                                {
+                                    <li style="font-size:15px;;margin-bottom:10px;" class="col-sm-4 cate-list" data-id="@cate.Id">
+                                        <a class="label label-info" style="font-size:15px;margin-bottom:10px;white-space:normal">@cate.TenDanhMuc</a>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/user/js/bootstrap-notify.min.js"></script>
+    <script src="~/user/js/History.js"></script>
+    <script src="~/js/Scripts/plugin/mustache.min.js"></script>
+    <script src="~/js/Scripts/plugin/jquery.twbsPagination.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/js/bootstrap-confirmation.js"></script>
+    <!--Profile-->
+
+    @RenderSection("scripts", required: false)
+
+</body>
+
+</html>

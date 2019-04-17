@@ -1,0 +1,267 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Layout/_Admin.cshtml";
+}
+@section scripts{
+    <script src="~/js/Scripts/controllers/SachController.js"></script>
+}
+<div class="title">
+    <h4>Quản lý sách</h4>
+</div>
+<div class="row">
+    <div class="add-item">
+        <a class="btn btn-default" href="#" id="btn-add" data-toggle="modal" data-target="#book-create" role="button">Thêm mới</a>
+    </div>
+    <div class="search">
+        <select name="" id="pageSize" class="text-inline-select">
+            <option value="5">5 rows</option>
+            <option value="10">10 rows</option>
+            <option value="20">20 rows</option>
+        </select>
+        <input type="text" id="search" class="text-inline-input" placeholder="&#xF002; Nhập tên sách...">
+
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th style="width:350px;">Tên sách</th>
+                    <th>Hình ảnh</th>
+                    <th style="width:150px;">Số lượng</th>
+                    <th style="width:150px;">Giá</th>
+                    <th>Trạng thái</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tblData"></tbody>
+        </table>
+        <script id="data-template" type="x-tmpl-mustache">
+            <tr>
+                <td>{{TenSach}}</td>
+                <td><img src="/images/HinhAnhSach/{{HinhAnh}}" style="width:50px;height:70px;" /> </td>
+                <td>{{SoLuong}}</td>
+                <td>{{Gia}}</td>
+                <td>{{TrangThai}}</td>
+                <td>
+                    <button type="button" class="fas fa-pen blue btn-update" data-id="{{Id}}" title="Click để cập nhật"></button>
+                    <button type="button" class="fas fa-info green btn-detail" data-id="{{Id}}" title="Click để xem chi tiết"></button>
+                    <button type="button" class="fas fa-trash red btn-delete" data-id="{{Id}}" title="Click để xóa"></button>
+
+                </td>
+            </tr>
+        </script>
+    </div>
+    <div id="pagination" style="text-align:center"></div>
+</div>
+<div class="footer">
+    <h5>&copy; BookStore Management. All right reserved.</h5>
+</div>
+<div class="modal fade modal-fullscreen" id="book-create" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form id="frm-create-book" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Thêm mới sách</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="txtTitle">Tiêu đề :</label>
+                                <div class="col-sm-10">
+                                    <input type="text" value="" class="form-control modal-input" name="create-title" id="create-title">
+                                </div>
+                            </div>
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="">Tóm tắt :</label>
+                                <div class="col-sm-10">
+                                    <textarea rows="4" cols="50" class="form-control" name="create-summary" id="create-summary" resize="none"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="">Danh mục :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" name="create-category" id="create-category" type="text" list="category" />
+                                    <datalist id="category">
+                                        @{
+                                            foreach (var item in ViewBag.listDanhMuc)
+                                            {
+                                                <option value="@item.TenDanhMuc"></option>
+                                            }
+                                        }
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="">Tác giả :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" name="create-author" id="create-author" type="text" list="author" />
+                                    <datalist id="author">
+                                        @{
+                                            foreach (var item in ViewBag.listTacGia)
+                                            {
+                                                <option value="@item.TenTacGia"></option>
+                                            }
+                                        }
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="">Nhà xuất bản :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" name="create-publisher" id="create-publisher" type="text" list="NXB" />
+                                    <datalist id="NXB">
+                                        @{
+                                            foreach (var item in ViewBag.listNhaXuatBan)
+                                            {
+                                                <option value="@item.TenNxb"></option>
+                                            }
+                                        }
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="">Tập :</label>
+                                <div class="col-sm-10">
+                                    <input type="number" value="" min="1" class="form-control" name="create-part" id="create-part">
+                                </div>
+                            </div>
+
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="">Giá bìa :</label>
+                                <div class="col-sm-10">
+                                    <input type="number" min="0" class="form-control" name="create-price" id="create-price">
+                                </div>
+                            </div>
+
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="">Trạng thái :</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" name="create-status" id="create-status">
+                                        @{
+                                            foreach (var item in ViewBag.listTrangThaiSach)
+                                            {
+                                                <option value="@item.Id">@item.TenTrangThai</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4" id="">
+                            <img id="image-create" src=""
+                                 style="cursor:pointer;width: 55%;height: 85%;padding: 0px;" /><br>
+                            <button class="btn-choose" type="button" id="btn-choose-create">Chọn hình</button>
+                            <input id="file-input-create" type="file" name="create-image" style="display:none;" accept="image/*"
+                                   onchange="loadFileCreate(event)" />
+
+                        </div>
+                        <script>
+                            var loadFileCreate = function (event) {
+                                var output = document.getElementById('image-create');
+                                output.src = URL.createObjectURL(event.target.files[0]);
+                            };
+                        </script>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger modal-btn" data-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-success modal-btn">Tạo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade modal-fullscreen" id="book-detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form id="frm-create-book" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Chi tiết sách</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row" id="detail-body">
+                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger modal-btn" data-dismiss="modal">Đóng</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script id="detail-template" type="x-tmpl-mustache">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+        <div class="form-group row detail-row">
+            <label class="col-sm-2 col-form-label detail-lbl modal-label" for="txtTitle">Tiêu đề :</label>
+            <div class="col-sm-10">
+                <input type="text" value="{{TenSach}}" class="form-control  modal-input" name="detail-title" id="detail-title" disabled>
+            </div>
+        </div>
+        <div class="form-group row detail-row">
+            <label class="col-sm-2 col-form-label detail-lbl modal-label" for="">Tóm tắt :</label>
+            <div class="col-sm-10">
+                <textarea rows="4" cols="50" value="" class="form-control  modal-input" name="detail-summary" id="detail-summary" resize="none" disabled>{{TomTat}}</textarea>
+            </div>
+        </div>
+        <div class="form-group row detail-row">
+            <label class="col-sm-2 col-form-label detail-lbl modal-label" for="">Danh mục :</label>
+            <div class="col-sm-10">
+                <input class="form-control  modal-input" value="{{TenDanhMuc}}" name="detail-category" id="detail-category" type="text" disabled />
+            </div>
+        </div>
+        <div class="form-group row detail-row">
+            <label class="col-sm-2 col-form-label detail-lbl modal-label" for="">Tác giả :</label>
+            <div class="col-sm-10">
+                <input class="form-control  modal-input" value="{{TenTacGia}}" name="detail-author" id="detail-author" type="text" disabled />
+            </div>
+        </div>
+        <div class="form-group row detail-row">
+            <label class="col-sm-2 col-form-label detail-lbl modal-label" for="">Nhà xuất bản :</label>
+            <div class="col-sm-10">
+                <input class="form-control  modal-input" value="{{TenNhaXuatBan}}" name="detail-publisher" id="detail-publisher" type="text" disabled />
+            </div>
+        </div>
+        <div class="form-group row detail-row">
+            <label class="col-sm-2 col-form-label detail-lbl modal-label" for="">Tập :</label>
+            <div class="col-sm-10">
+                <input type="number" value="{{Tap}}" min="1" class="form-control  modal-input" name="detail-part" id="detail-part" disabled>
+            </div>
+        </div>
+        <div class="form-group row detail-row">
+            <label class="col-sm-2 col-form-label detail-lbl modal-label" for="">Giá bìa :</label>
+            <div class="col-sm-10">
+                <input type="number" min="0" value="{{Gia}}" class="form-control  modal-input" name="detail-price" id="detail-price" disabled>
+            </div>
+        </div>
+        <div class="form-group row detail-row">
+            <label class="col-sm-2 col-form-label detail-lbl modal-label" for="">Số lượng :</label>
+            <div class="col-sm-10">
+                <input type="number" min="0" value="{{SoLuong}}" class="form-control  modal-input" name="detail-quantity" id="detail-quantity" disabled>
+            </div>
+        </div>
+        <div class="form-group row detail-row">
+            <label class="col-sm-2 col-form-label detail-lbl modal-label" for="">Số lượt mua :</label>
+            <div class="col-sm-10">
+                <input type="number" min="0" value="{{SoLuotMua}}" class="form-control  modal-input"  disabled>
+            </div>
+        </div>
+        <div class="form-group row detail-row">
+            <label class="col-sm-2 col-form-label detail-lbl modal-label" for="">Trạng thái :</label>
+            <div class="col-sm-10">
+                <select class="form-control  modal-input" name="create-status" id="create-status" disabled>
+                    <option>{{TenTrangThai}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4" id="">
+        <img id="image-detail" src="/images/HinhAnhSach/{{HinhAnh}}"
+             style="cursor:pointer;width: 55%;height: 85%;padding: 0px;" /><br>
+    </div>
+</script>

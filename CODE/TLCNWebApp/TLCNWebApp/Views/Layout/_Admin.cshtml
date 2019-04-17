@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>BookStore Management</title>
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/admin/css/index.css">
+    <link rel="stylesheet" href="~/admin/css/list.css">
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="content">
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand fas fa-book header-title" href="#">&nbsp;BookStore Management</a>
+
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav" style="color:black;">
+                    <div id="box-user">
+                        <div id="box-user-left">
+                            <img id="img-admin" src="~/admin/images/man.png">
+                        </div>
+                        <div id="box-user-right">
+                            <b id="login-user">Administrator</b>
+                            <p>admin@gmail.com.vn</p>
+
+                        </div>
+                    </div>
+                    <li class="test">
+                        <a href="@Url.Action("Index","Home")" class="fas fa-home menu-item"> Trang chủ</a>
+                    </li>
+                    <li class="test">
+                        <a href="@Url.Action("Index","Sach")" class="fas fa-book">&nbsp;Quản lý sách</a>
+                    </li>
+                    <li class="test">
+                        <a href="@Url.Action("Index","DanhMuc")" class="fas fa-clipboard-list">&nbsp;Quản lý danh mục</a>
+                    </li>
+                    <li class="test">
+                        <a href="@Url.Action("Index","TacGia")" class="fas fa-pen-fancy">&nbsp;Quản lý tác giả</a>
+                    </li>
+                    <li class="test">
+                        <a href="@Url.Action("Index","NhaXuatBan")" class="fas fa-building">&nbsp;Quản lý nhà xuất bản</a>
+                    </li>
+
+                    <li class="test">
+                        <a href="@Url.Action("Index","QuanLyNhapSach")" class="fas fa-file-import">&nbsp;Quản lý phiếu nhập sách</a>
+                    </li>
+                    <li class="test">
+                        <a href="@Url.Action("Index","QuanLyDonHang")" class="fas fa-phone">&nbsp;Quản lý đơn đặt hàng</a>
+                    </li>
+                    <li class="test">
+                        <a href="@Url.Action("Index","QuanLyQuanTriVien")" class="fas fa-user">&nbsp;Quản lý tài khoản và phân quyền</a>
+                    </li>
+                    <li class="test" style="cursor:pointer">
+                        <a id="logout" class="fas fa-sign-out-alt">&nbsp;Đăng xuất</a>
+                    
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+        <div class="container">
+            @RenderBody()
+        </div>
+
+
+
+
+
+
+    </div>
+    @*<div class="modal fade modal-fullscreen in" id="book-detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="visibility: visible; display: block;">
+            <div class="modal-dialog" role="document" style="width: initial; height: initial; max-width: initial; margin: 5px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Thông tin chi tiết sách</h4>
+                    </div>
+                    <div class="modal-body" style="overflow-y: scroll; height: 350.4px;">
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+                                <div class="form-group row detail-row">
+                                    <label class="col-sm-2 col-form-label detail-lbl" for="txtTitle">Tiêu đề :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" value="tên sách" class="form-control" id="txtTitle" disabled="">
+                                    </div>
+                                </div>
+                                <div class="form-group row detail-row">
+                                    <label class="col-sm-2 col-form-label detail-lbl" for="">Tiêu đề phụ :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" value="tên sách" class="form-control" id="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="form-group row detail-row">
+                                    <label class="col-sm-2 col-form-label detail-lbl" for="">Danh mục :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" value="tên sách" class="form-control" id="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="form-group row detail-row">
+                                    <label class="col-sm-2 col-form-label detail-lbl" for="">Tác giả :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" value="tên sách" class="form-control" id="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="form-group row detail-row">
+                                    <label class="col-sm-2 col-form-label detail-lbl" for="">Nhà xuất bản :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" value="tên sách" class="form-control" id="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="form-group row detail-row">
+                                    <label class="col-sm-2 col-form-label detail-lbl" for="">Tập :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" value="tên sách" class="form-control" id="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="form-group row detail-row">
+                                    <label class="col-sm-2 col-form-label detail-lbl" for="">Ngôn ngữ :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" value="tên sách" class="form-control" id="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="form-group row detail-row">
+                                    <label class="col-sm-2 col-form-label detail-lbl" for="">Thời lượng :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" value="tên sách" class="form-control" id="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="form-group row detail-row">
+                                    <label class="col-sm-2 col-form-label detail-lbl" for="">Số lượng :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" value="tên sách" class="form-control" id="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="form-group row detail-row">
+                                    <label class="col-sm-2 col-form-label detail-lbl" for="">Giá bìa :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" value="tên sách" class="form-control" id="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="form-group row detail-row">
+                                    <label class="col-sm-2 col-form-label detail-lbl" for="">Tiền thế chân :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" value="tên sách" class="form-control" id="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="form-group row detail-row">
+                                    <label class="col-sm-2 col-form-label detail-lbl" for="">Tủ sách :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" value="tên sách" class="form-control" id="" disabled="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4" id="">
+                                <img id="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRILb1xMD501N7xBFPnB45ga6xZvpG8XHX9CWFj7cnAnJLsROUA" style="cursor:pointer;width: 65%;height: 100%;padding: 20px;"><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger modal-btn" data-dismiss="modal">Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+    <script src="~/js/modal.js"></script>
+    <script src="~/admin/js/bootstrap-notify.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="~/js/Scripts/plugin/mustache.min.js"></script>
+    <script src="~/js/Scripts/plugin/jquery.twbsPagination.min.js"></script>
+    <script src="~/js/Scripts/plugin/core.js"></script>
+    <script src="~/js/Scripts/plugin/md5.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#logout').click(function () {
+                sessionStorage.removeItem("Role");
+                sessionStorage.removeItem("UserName");
+                location.href = '/Login';
+            });
+
+            $('#login-user').html(sessionStorage.getItem('UserName'));
+        });
+    </script>
+    @RenderSection("scripts", required: false)
+
+</body>
+
+</html>

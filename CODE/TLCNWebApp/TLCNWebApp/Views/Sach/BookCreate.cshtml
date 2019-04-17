@@ -1,0 +1,99 @@
+﻿<div class="modal fade modal-fullscreen" id="book-create" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form id="frm-create-book">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Thêm mới sách</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="txtTitle">Tiêu đề :</label>
+                                <div class="col-sm-10">
+                                    <input type="text" value="" class="form-control" name="create-title" id="create-title">
+                                </div>
+                            </div>
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="">Tóm tắt :</label>
+                                <div class="col-sm-10">
+                                    <textarea rows="4" cols="50" class="form-control" name="create-summary" id="create-summary" resize="none"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="">Danh mục :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" name="create-category" id="create-category" type="text" list="category" />
+                                    <datalist id="category">
+                                        <option>Truyện tranh</option>
+                                        <option>Saab</option>
+                                        <option>Mercedes</option>
+                                        <option>Audi</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="">Tác giả :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" name="create-author" id="create-author" type="text" list="author" />
+                                    <datalist id="author">
+                                        <option>Volvo</option>
+                                        <option>Saab</option>
+                                        <option>Mercedes</option>
+                                        <option>Audi</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="">Nhà xuất bản :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" name="create-publisher" id="create-publisher" type="text" list="NXB" />
+                                    <datalist id="NXB">
+                                        <option>Volvo</option>
+                                        <option>Saab</option>
+                                        <option>Mercedes</option>
+                                        <option>Audi</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="">Tập :</label>
+                                <div class="col-sm-10">
+                                    <input type="number" value="" min="1" class="form-control" name="create-part" id="create-part">
+                                </div>
+                            </div>
+
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="">Giá bìa :</label>
+                                <div class="col-sm-10">
+                                    <input type="number" min="0" class="form-control" name="create-price" id="create-price">
+                                </div>
+                            </div>
+
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-2 col-form-label detail-lbl" for="">Trạng thái :</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" name="create-status" id="create-status">
+                                        <option>sadsda</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4" id="">
+                            <img id="image-create" src=""
+                                 style="cursor:pointer;width: 55%;height: 85%;padding: 0px;" /><br>
+                            <button class="btn-choose" type="button" id="btn-choose-create">Chọn hình</button>
+                            <input id="file-input-create" type="file" name="create-image" style="display:none;" accept="image/*" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger modal-btn" data-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-success modal-btn">Tạo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

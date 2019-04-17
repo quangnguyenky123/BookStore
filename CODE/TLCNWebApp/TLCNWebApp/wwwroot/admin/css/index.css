@@ -1,0 +1,113 @@
+body {
+    background-color: #F3F3F3;
+    color: gray;
+  }
+  .content {
+    width: 100%;
+  }
+  .container {
+    min-height: 568px;
+    
+  }
+  .navbar-default{
+      background-color: #34C987;
+  }
+  .navbar-default .navbar-nav>li>a:focus{
+    color:#34C987;
+  }
+  .navbar-default .navbar-brand{
+      color: white;
+  }
+  .navbar-nav{
+      background-color: #F3F3F3;
+  }
+  #box-user{
+    background-color: rgb(218, 214, 214);
+    height: 60px;
+    margin-top:20px;
+  }
+  #box-user-left{
+      position: absolute;
+      /* float: left; */
+      background-color: rgb(218, 214, 214);
+     
+  }
+  #box-user-left img{
+      width: 50px;
+      height: 50px;
+      margin-top:5px;
+      margin-left:5px;
+  }
+  #box-user-right{
+    position: absolute;
+    /* float: right; */
+    height: 100%;
+    left: 80px;
+    margin-top:10px;
+    margin-right: 10px;
+}
+  @media (min-width: 768px){
+  .navbar-collapse {
+      position: absolute;
+      width: 250px;
+      margin-top: 51px;
+      
+  }
+  .navbar-collapse li{
+      width: 100%;
+  }
+  .container {
+    position: inherit;
+    margin: 0 0 0 250px;
+    padding: 0 30px;
+    border-left: 1px solid  #EBEBEB;
+    width: auto;
+  }
+  
+}
+@media (max-width: 768px){
+    .navbar-header a{
+        font-size: 14px;
+    }
+    body{
+        font-size: 12px;
+    }
+    .navbar-collapse{
+        margin-bottom:-10px;
+    }
+    .container {
+        position: inherit;
+        padding-left:30px;
+        padding-right:30px;
+        width: auto;
+      }
+      .navbar-collapse{
+        border-bottom: 1px solid  green;
+      }
+}
+.row{
+    background-color: white;
+    padding-left: 15px;
+    padding-bottom: 45px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+.title{
+    text-transform: uppercase;
+}
+.footer{
+    text-align: center;
+    padding-top:50px;
+}
+.test{
+    background-color: rgb(218, 214, 214);
+    border: 1px solid #EBEBEB;      
+}
+
+.navbar-default .navbar-nav > li>a{
+    color :black;
+}
+h4{
+    color: black;
+}
+

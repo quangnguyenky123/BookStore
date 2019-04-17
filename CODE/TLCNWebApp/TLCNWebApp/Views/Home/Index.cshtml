@@ -1,0 +1,222 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Layout/_User.cshtml";
+}
+@section scripts{
+    <script src="~/js/Scripts/controllers/HomeController.js"></script>
+}
+<div id="container">
+    <p id="back-top"> <a href="#top"><span></span></a> </p>
+    <div class="container">
+        <div id="notification"></div>
+        <div class="row">
+            <div class="col-sm-12 " id="content">
+                <script type="text/javascript">
+                    if ($('.container').width() > 723) {
+                        (function ($) {
+                            $.fn.equalHeights = function (minHeight, maxHeight) {
+                                tallest = (minHeight) ? minHeight : 0;
+                                this.each(function () {
+                                    if ($(this).height() > tallest) {
+                                        tallest = $(this).height()
+                                    }
+                                });
+                                if ((maxHeight) && tallest > maxHeight) tallest = maxHeight;
+                                return this.each(function () {
+                                    $(this).height(tallest)
+                                })
+                            }
+                        })(jQuery)
+                        $(window).load(function () {
+                            if ($(".maxheight-feat").length) {
+                                $(".maxheight-feat").equalHeights()
+                            }
+                        });
+                    };
+                </script>
+                <div class="box specials">
+                    <div class="box-heading">Sách mới</div>
+                    <div class="box-content">
+                        <div class="box-product">
+                            <ul id="book-new" class="row"></ul>
+                        </div>
+                        <div id="paging-new" class="pagination">
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box specials">
+                    <div class="box-heading special-heading">Sách bán chạy</div>
+                    <div class="box-content">
+                        <div class="box-product">
+                            <ul id="book-hot" class="row"></ul>
+                        </div>
+                        <div id="paging-hot" class="pagination">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="box specials">
+                    <div class="box-heading special-heading">Sách sắp bán</div>
+                    <div class="box-content">
+                        <div class="box-product">
+                            <ul id="book-selling-soon" class="row"></ul>
+                        </div>
+                        <div id="paging-selling-soon" class="pagination">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<script id="book-template" type="x-tmpl-mustache">
+    <li class="col-sm-2">
+        <div>
+            <div class="image2" data-id="{{Id}}"
+                 data-price="{{Gia}}"
+                 data-description="{{TomTat}}"
+                 data-img="~/images/HinhAnhSach/{{HinhAnh}}"
+                 data-title="{{TenSach}}"
+                 data-author="{{TacGia}}"
+                 data-part="{{Tap}}"
+                <a title="{{TenSach}}">
+                    <img class="book-img" id="" src="images/HinhAnhSach/{{HinhAnh}}" alt="{{HinhAnh}}" />
+                </a>
+                <a data-id="{{Id}}"
+                   data-price="{{Gia}}"
+                   data-img="/images/HinhAnhSach/{{HinhAnh}}"
+                   data-title="{{TenSach}}"
+                   data-author="{{TacGia}}"
+                   data-description="{{TomTat}}"
+                   data-part="{{Tap}}" rel="colorbox" class="colorbox4 quick-view-button">
+                    <i class="fa fa-search-plus "></i>
+                </a>
+            </div>
+            <div class="inner">
+                <div class="f-left maxheight-feat">
+                    <div class="name book-title book-title1" title="{{TenSach}}">
+                        <a>{{TenSach}}</a>
+                    </div>
+                    <div class="description book-description book-description1" title="{{TomTat}}">{{TomTat}}</div>
+                </div>
+                <div class="cart-button">
+                    <div class="price">
+                        <span class="price-display">{{GiaFormat}}</span>&nbsp;<sup>đ</sup>
+                    </div>
+
+                    <div class="cart">
+                        <a title="Add to cart"
+                           data-id="{{Id}}"
+                           data-price="{{Gia}}"
+                           data-description="{{TomTat}}"
+                           data-img="~/images/HinhAnhSach/{{HinhAnh}}"
+                           data-title="{{TenSach}}"
+                           data-author="{{TacGia}}"
+                           data-part="{{Tap}}"
+                           class="button addToCart tooltip-1 add-to-cart">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>Add to cart</span>
+                        </a>
+                    </div>
+                    <span class="clear"></span>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </li>
+</script>
+<script id="selling-soon-book-template" type="x-tmpl-mustache">
+    <li class="col-sm-2">
+        <div>
+            <div class="image2" data-id="{{Id}}"
+                 data-price="{{Gia}}"
+                 data-description="{{TomTat}}"
+                 data-img="~/images/HinhAnhSach/{{HinhAnh}}"
+                 data-title="{{TenSach}}"
+                 data-author="{{TacGia}}"
+                 data-part="{{Tap}}"
+                <a title="{{TenSach}}">
+                    <img class="book-img" id="" src="images/HinhAnhSach/{{HinhAnh}}" alt="{{HinhAnh}}" />
+                </a>
+                <a data-id="{{Id}}"
+                   data-price="{{Gia}}"
+                   data-img="/images/HinhAnhSach/{{HinhAnh}}"
+                   data-title="{{TenSach}}"
+                   data-author="{{TacGia}}"
+                   data-description="{{TomTat}}"
+                   data-disable="true"
+                   data-part="{{Tap}}" rel="colorbox" class="colorbox4 quick-view-button">
+                    <i class="fa fa-search-plus "></i>
+                </a>
+            </div>
+            <div class="inner">
+                <div class="f-left maxheight-feat">
+                    <div class="name book-title book-title1" title="{{TenSach}}">
+                        <a>{{TenSach}}</a>
+                    </div>
+                    <div class="description book-description book-description1" title="{{TomTat}}">{{TomTat}}</div>
+                </div>
+                <div class="cart-button">
+                    <div class="price">
+                        <span class="price-display">{{GiaFormat}}</span>&nbsp;<sup>đ</sup>
+                    </div>
+
+                    <div class="cart">
+                        <a title="Add to cart"
+                           data-id="{{Id}}"
+                           data-price="{{Gia}}"
+                           data-description="{{TomTat}}"
+                           data-img="/images/HinhAnhSach/{{HinhAnh}}"
+                           data-title="{{TenSach}}"
+                           data-author="{{TacGia}}"
+                           data-part="{{Tap}}"
+                           class="button addToCart tooltip-1 disable">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>Add to cart</span>
+                        </a>
+                    </div>
+                    <span class="clear"></span>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </li>
+</script>
+<div class="modal fade product_view" id="product_view">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" data-dismiss="modal" class="class pull-right"><span class="fas fa-times"></span></a>
+                <h3 class="modal-title" style="margin-left:20px;">Chi tiết sách</h3>
+            </div>
+            <div class="modal-body">
+                <div id="row-detail-book" class="row">
+                    <div class="col-md-4 product_img">
+                        <img id="detail-image" src="" class="img-responsive">
+                    </div>
+                    <div class="col-md-8 product_content">
+                        <p style="font-weight:bold;color :black;" id="detail-title"></p>
+                        <p><span id="detail-part"></span></p>
+                        <p><span style="font-weight:bold" id="detail-author"></span></p>
+                        <p><span class="detail-description" id="detail-description"></span><span data-status="1" class="detail-description" id="read-more">Xem thêm</span></p>
+                        <p style="color:black;font-size:20px" id="cost"><b >Giá</b> :&nbsp;<span  id="detail-price"></span><sup>đ</sup></></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-ground">
+                    <button style="margin-right:15px;" id="detail-add-to-cart" type="button" class="btn btn-primary"><span class="fas fa-shopping-cart"></span>&nbsp;Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

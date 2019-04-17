@@ -1,0 +1,141 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Layout/_Admin.cshtml";
+}
+@section scripts{
+    <script src="~/js/Scripts/controllers/DonDatHangController.js"></script>
+}
+<div class="title">
+    <h4>Quản lý đơn đặt hàng</h4>
+</div>
+<div class="row">
+    <div class="search">
+        <select name="" id="pageSize" class="text-inline-select">
+            <option value="5">5 rows</option>
+            <option value="10">10 rows</option>
+            <option value="20">20 rows</option>
+        </select>
+        <input type="text" id="search" class="text-inline-input" placeholder="&#xF002; Nhập mã phiếu nhập...">
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Mã đơn đặt hàng</th>
+                    <th>Tên khách hàng</th>
+                    <th>Ngày đặt</th>
+                    <th>Tổng tiền</th>
+                    <th>Trạng thái đơn hàng</th>
+                    <th>Tình trạng xác nhận</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tblData"></tbody>
+        </table>
+        <script id="data-template" type="x-tmpl-mustache">
+            <tr>
+                <td>{{Id}}</td>
+                <td>{{TenKh}}</td>
+                <td>{{NgayDat}}</td>
+                <td>{{TongTien}}<sup>đ</sup></td>
+                <td>{{TrangThai}}</td>
+                <td>{{XacNhan}}</td>
+                <td>
+                    <button type="button" class="fas fa-info green btn-detail" data-id="{{Id}}" title="Click để xem chi tiết"></button>
+                </td>
+            </tr>
+        </script>
+    </div>
+    <div id="pagination" style="text-align:center"></div>
+    <div class="footer">
+        <h5>&copy; BookStore Management. All right reserved.</h5>
+    </div>
+</div>
+<div class="modal fade modal-fullscreen" id="order-detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Chi tiết đơn đặt hàng</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row" id="detail-body">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group row detail-row">
+                                    <label class="col-form-label detail-lbl modal-label" for="">Mã đơn đặt hàng :</label>
+                                    <input id="order-id" class="form-control modal-input" type="text" disabled />
+                                </div>
+                                <div class="form-group row detail-row">
+                                    <label class="col-form-label detail-lbl modal-label" for="">Ngày đặt :</label>
+                                    <input id="order-create-date"  class="form-control modal-input" type="text" disabled />
+                                </div>
+                                <div class="form-group row detail-row">
+                                    <label class="col-form-label detail-lbl modal-label" for="">Ngày giao :</label>
+                                    <input id="order-delivery-date" class="form-control modal-input" type="date" />
+                                </div>
+                                <div class="form-group row detail-row">
+                                    <label class="col-form-label detail-lbl modal-label" for="">Trạng thái :</label>
+                                    <select id="order-status" class="form-control modal-input" >
+                                        @foreach(var status in ViewBag.listTrangThai)
+                                        {
+                                            <option value="@status.Id">@status.TenTrangThai</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="customer-info" class="col-sm-6">
+                               
+                            </div>
+                        </div>                       
+                        <hr />
+                        <table class="table modal-table">
+                            <thead>
+                                <tr>
+                                    <th>Tên sách</th>
+                                    <th>Số lượng</th>
+                                    <th>Đơn giá</th>
+                                </tr>
+                            </thead>
+                            <tbody id="detai-data"></tbody>
+                        </table>
+                        <hr />
+                        <div class="form-group row detail-row" style="float:right">
+                            <label class="col-form-label detail-lbl lbl-price">Tổng tiền :&nbsp;<span id="price"></span><sup>đ</sup></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger modal-btn" data-dismiss="modal">Đóng</button>
+                <button id="update-order" type="button" class="btn btn-success modal-btn" disabled >Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script id="detail-template" type="x-tmpl-mustache">
+    <tr>
+        <td>{{TenSach}}</td>
+        <td>{{SoLuong}}</td>
+        <td>{{DonGia}}<sup>đ</sup></td>
+    </tr>
+</script>
+<script id="customer-template" type="x-tmpl-mustache">
+    <div class="form-group row detail-row">
+        <label class="col-form-label detail-lbl modal-label" for="">Tên khách hàng :</label>
+        <input class="form-control modal-input" value="{{TenKh}}" type="text" disabled />
+    </div>
+    <div class="form-group row detail-row">
+        <label class="col-form-label detail-lbl modal-label" for="">Địa chỉ :</label>
+        <input  class="form-control modal-input" value="{{DiaChi}}" type="text" disabled />
+    </div>
+    <div class="form-group row detail-row"> 
+        <label class="col-form-label detail-lbl modal-label" for="">Email :</label>
+        <input  class="form-control modal-input" value="{{Email}}" type="text" disabled />
+    </div>
+    <div class="form-group row detail-row">
+        <label class="col-form-label detail-lbl modal-label" for="">Số điện thoại :</label>
+        <input  class="form-control modal-input" value="{{SoDienThoai}}" type="text" disabled />
+    </div>
+</script>

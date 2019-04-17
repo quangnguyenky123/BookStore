@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    background-color: #F3F3F3;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#content {
+    padding-top: 12%;
+}
+
+.title {
+    color: #FEFEFE;
+    font-size: 110px;
+    
+}
+
+.warning,.message{
+    color:gray;
+}
+.warning{
+    font-size: 22px;
+}

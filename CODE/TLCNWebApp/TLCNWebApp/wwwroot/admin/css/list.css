@@ -1,0 +1,205 @@
+td button{
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: white;
+    border:1px solid;
+    outline:none;
+    }
+
+    .blue{
+        background-color: #498CBE;
+        border:1px solid #498CBE;
+    }
+    .blue:focus{
+        background-color: rgb(7, 78, 133);
+        border:1px solid rgb(7, 78, 133);
+    }
+    .green{
+    background-color: #47C18F;
+    border:1px solid #47C18F;
+    }
+    .green:focus{
+        background-color: rgb(3, 102, 61);
+        border:1px solid rgb(3, 102, 61);
+    }
+    .red{
+        background-color: #EC5854;
+        border:1px solid #EC5854;
+    }
+    .red:focus{
+        background-color: rgb(173, 9, 14);
+        border:1px solid rgb(173, 9, 14);
+    }
+    thead{
+        background-color: 	#FBFBFB;
+    }
+    .search{
+        display: inline-block;
+        width: 100%;
+    }
+    .search input{
+        font-family:Arial, FontAwesome;
+    }
+    .text-inline{
+        
+       border-bottom: solid rgb(158, 154, 154) 1px;
+   }
+  
+   @media (min-width: 768px){
+    .text-inline-select{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+       border-bottom: solid rgb(158, 154, 154) 1px;
+       width: 10%;
+       float: left;
+       padding-bottom: 4px;
+       }
+       .text-inline-input{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+       border-bottom: solid rgb(158, 154, 154) 1px;
+       width: 89%;
+       float: right;
+       margin-bottom: 7px;
+       }
+    
+  }
+  @media (max-width: 768px){
+    .text-inline-select{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+       border-bottom: solid rgb(158, 154, 154) 1px;
+       width: 100%;
+       float: left;
+       padding-top: 10px;
+       }
+       .text-inline-input{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+       border-bottom: solid rgb(158, 154, 154) 1px;
+       width: 100%;
+       float: right;
+       padding-top: 10px;
+       }
+  }
+  #btn-add{
+    border:1px solid #498CBE;
+    margin-top:10px;
+    margin-bottom:10px;
+    color:#498CBE;
+    background-color: transparent;
+    min-width: 90px;
+}
+#btn-import{
+    border:1px solid #498CBE;
+    margin-top:10px;
+    margin-bottom:10px;
+    color:#498CBE;
+    background-color: transparent;
+    min-width: 90px;
+}
+#btn-add:hover{
+    background-color: transparent;
+}
+.pagination{
+    text-align: center;
+    width: 100%;
+}
+#select-page{
+    align-content: center;
+    width: 100%;
+    
+}
+#select-page button{
+    color: black;
+    border:1px solid transparent;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    outline:none;
+}
+#select-page button:focus{
+    background-color:	#33B3ED;
+    outline:none;
+  }
+  .detail-lbl{
+      margin-bottom: 0px;
+      padding-top: 10px;
+      height: 30px;
+  }
+  .detail-row{
+      padding-bottom: 0px;
+      padding-top: 10px;
+  }
+  .form-control[disabled]{
+    cursor: text;
+  }
+  .btn-choose{
+    color: rgb(49, 170, 226);
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid rgb(91, 177, 218);
+    border-radius: 4px;
+    min-height: 35px;
+}
+.modal-btn{
+    min-width: 80px;
+}
+.btn span.glyphicon {    			
+	opacity: 0;				
+}
+.btn.active span.glyphicon {				
+	opacity: 1;				
+}
+.btn-group{
+    width: 30px;
+    height: 30px;
+    
+}
+.light-blue{
+    background-color: purple;
+}
+.gray{
+    background-color: gray;
+}
+.header-title{
+    font-size: 25px;
+
+}
+.pagination > page-item first > a {
+    float: none;
+}
+label.error {
+    color: red;
+}
+.input-form-nhap{
+    width:80%;
+}
+.modal-input {
+    background-color: white;
+    color: black;
+}
+.modal-input[disabled] {
+    background-color: white;
+    color: black;
+}
+.modal-label {
+    color: black;
+}
+.modal-table{
+    color:black;
+}
+.modal-table > thead > tr {
+    background-color: lightblue;
+}
+.lbl-price {
+    color: black;
+    font-size: 17px;
+}

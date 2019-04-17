@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TLCNWebApp", "TLCNWebApp\TLCNWebApp.csproj", "{F8BB5908-40DF-45B5-8B7F-67155C65B9BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8BB5908-40DF-45B5-8B7F-67155C65B9BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8BB5908-40DF-45B5-8B7F-67155C65B9BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8BB5908-40DF-45B5-8B7F-67155C65B9BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8BB5908-40DF-45B5-8B7F-67155C65B9BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77A2BB6D-D33D-4DFC-9C2C-599B4D1A69A9}
+	EndGlobalSection
+EndGlobal

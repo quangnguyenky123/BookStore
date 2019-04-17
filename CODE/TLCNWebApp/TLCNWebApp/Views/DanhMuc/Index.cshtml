@@ -1,0 +1,198 @@
+﻿@using TLCNWebApp.Models.DTO
+@model DanhMucDTO
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Layout/_Admin.cshtml";
+}
+@section scripts{
+    
+    <script src="~/js/Scripts/controllers/DanhMucController.js"></script>
+}
+<div class="title">
+    <h4>Quản lý danh mục</h4>
+</div>
+<div class="row">
+    <div class="add-item">
+        <a class="btn btn-default" href="#" id="btn-add" role="button" >Thêm mới</a>
+    </div>
+    <div class="search">
+        <select name="" id="pageSize" class="text-inline-select">
+            <option value="5">5 rows</option>
+            <option value="10">10 rows</option>
+            <option value="20">20 rows</option>
+        </select>
+        <input type="text" id="search" class="text-inline-input" placeholder="&#xF002; Nhập tên danh mục...">
+
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th style="width:350px;">Tên danh mục</th>
+                    <th>Mô tả</th>
+                    <th style="width:150px;">Trạng thái</th>
+                    <th style="width:150px;"></th>
+                </tr>
+            </thead>
+            <tbody id="tblData"></tbody>
+        </table>
+        <script id="data-template" type="x-tmpl-mustache">
+            <tr>
+                <td>{{TenDanhMuc}}</td>
+                <td>{{MoTa}}</td>
+                <td>{{TrangThai}}</td>
+                <td>
+                    <button type="button" class="fas fa-pen blue btn-update" data-id="{{Id}}" title="Click để cập nhật"></button>
+                    <button type="button" class="fas fa-info green btn-detail" data-id="{{Id}}" title="Click để xem chi tiết"></button>
+                    <button type="button" class="fas fa-trash red btn-delete" data-id="{{Id}}" title="Click để xóa"></button>
+
+                </td>
+            </tr>
+        </script>
+    </div>
+    <div id="pagination" style="text-align:center"></div>
+</div>
+<div class="footer">
+    <h5>&copy; BookStore Management. All right reserved.</h5>
+</div>
+<div id="category-detail" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Chi tiết danh mục</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div id="detail-content" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger modal-btn" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="detail-template" type="x-tmpl-mustache">
+    <div class="form-group row detail-row">
+        <label class="col-sm-3 col-form-label detail-lbl" for="">Tên danh mục :</label>
+        <div class="col-sm-9">
+            <input type="text" value="{{TenDanhMuc}}" class="form-control" id="" disabled>
+        </div>
+    </div>
+    <div class="form-group row detail-row">
+        <label class="col-sm-3 col-form-label detail-lbl" for="">Trạng thái :</label>
+        <div class="col-sm-9">
+            <input type="text" value="{{TrangThai}}" class="form-control" id="" disabled>
+        </div>
+    </div>
+    <div class="form-group row detail-row">
+        <label class="col-sm-3 col-form-label detail-lbl" for="">Mô tả :</label>
+        <div class="col-sm-9">
+            <textarea class="form-control" name="" id="" cols="30" rows="10" disabled> {{MoTa}}</textarea>
+        </div>
+    </div>
+</script>
+<div id="category-update" class="modal fade" role="dialog">
+</div>
+<script id="update-template" type="x-tmpl-mustache">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <form id="frm-update" method="post">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Cập nhật danh mục</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-3 col-form-label detail-lbl" for="">Tên danh mục :</label>
+                                <div class="col-sm-9">
+
+                                    <input type="text" value="{{TenDanhMuc}}" class="form-control" id="txtTenDanhMuc" name="txtTenDanhMuc">
+                                </div>
+                            </div>
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-3 col-form-label detail-lbl" for="">Trạng thái :</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" name="" data-stt="{{TrangThai}}" id="sll-status">
+                                        @foreach (var status in ViewBag.listStatus)
+                                        {
+                                            <option value="@status.Id">@status.TenTrangThai</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-3 col-form-label detail-lbl" for="">Mô tả :</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" name="txtMoTa" id="txtMoTa" cols="30" rows="10">{{MoTa}}</textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger modal-btn" data-dismiss="modal">Đóng</button>
+                    <button id="btn-update" data-id="{{Id}}" type="submit" class="btn btn-success modal-btn">Cập nhật</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</script>
+<div id="category-create" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <form id="frm-create" method="post">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Thêm danh mục mới</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-3 col-form-label detail-lbl" for="">Tên danh mục :</label>
+                                <div class="col-sm-9">
+                                    <input type="text" value="" class="form-control"name="categoryName" id="categoryName">
+                                </div>
+                            </div>
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-3 col-form-label detail-lbl" for="">Trạng thái :</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" name="" id="categoryStatus">
+                                        @foreach (var status in ViewBag.listStatus)
+                                        {
+                                            <option value="@status.Id">@status.TenTrangThai</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row detail-row">
+                                <label class="col-sm-3 col-form-label detail-lbl" for="">Mô tả :</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" name="" id="categoryDescription" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger modal-btn" data-dismiss="modal">Đóng</button>
+                    <button id="btn-tao" type="submit" class="btn btn-success modal-btn">Tạo</button>
+                </div>
+            </div>
+            </form>
+    </div>
+</div>

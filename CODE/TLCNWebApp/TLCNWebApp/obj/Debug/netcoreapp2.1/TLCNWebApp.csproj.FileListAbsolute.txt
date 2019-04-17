@@ -1,0 +1,144 @@
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.deps.json
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.runtimeconfig.json
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.runtimeconfig.dev.json
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.dll
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.pdb
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.Views.dll
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.Views.pdb
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorAssemblyInfo.cache
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorAssemblyInfo.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.AssemblyInfo.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.TagHelpers.input.cache
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.TagHelpers.output.cache
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorCoreGenerate.cache
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\DanhMuc\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Error\Error401.g.cshtml.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Layout\_Admin.g.cshtml.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Layout\_User.g.cshtml.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Login\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\NhaXuatBan\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\QuanLyDonHang\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\QuanLyNhapSach\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\QuanLyQuanTriVien\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Sach\BookCreate.g.cshtml.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Sach\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\TacGia\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\ViewOrder\MyOrder.g.cshtml.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorTargetAssemblyInfo.cache
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorTargetAssemblyInfo.cs
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.Views.pdb
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.dll
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.pdb
+C:\Users\USER\Desktop\Lasted\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.csproj.CopyComplete
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.deps.json
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.runtimeconfig.json
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.runtimeconfig.dev.json
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.dll
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.pdb
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.Views.dll
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.Views.pdb
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.csprojAssemblyReference.cache
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.csproj.CoreCompileInputs.cache
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorAssemblyInfo.cache
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorAssemblyInfo.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.AssemblyInfoInputs.cache
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.AssemblyInfo.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.TagHelpers.input.cache
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.TagHelpers.output.cache
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorCoreGenerate.cache
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\DanhMuc\Index.g.cshtml.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Error\Error401.g.cshtml.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Layout\_Admin.g.cshtml.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Layout\_User.g.cshtml.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Login\Index.g.cshtml.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\NhaXuatBan\Index.g.cshtml.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\QuanLyDonHang\Index.g.cshtml.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\QuanLyNhapSach\Index.g.cshtml.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\QuanLyQuanTriVien\Index.g.cshtml.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Sach\BookCreate.g.cshtml.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Sach\Index.g.cshtml.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\TacGia\Index.g.cshtml.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\ViewOrder\MyOrder.g.cshtml.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorTargetAssemblyInfo.cache
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorTargetAssemblyInfo.cs
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.Views.pdb
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.dll
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.pdb
+E:\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.csproj.CopyComplete
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.deps.json
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.runtimeconfig.json
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.runtimeconfig.dev.json
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.dll
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.pdb
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.Views.dll
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.Views.pdb
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorAssemblyInfo.cache
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorAssemblyInfo.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.AssemblyInfo.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.TagHelpers.input.cache
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.TagHelpers.output.cache
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorCoreGenerate.cache
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\DanhMuc\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Error\Error401.g.cshtml.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Layout\_Admin.g.cshtml.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Layout\_User.g.cshtml.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Login\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\NhaXuatBan\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\QuanLyDonHang\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\QuanLyNhapSach\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\QuanLyQuanTriVien\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Sach\BookCreate.g.cshtml.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Sach\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\TacGia\Index.g.cshtml.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\ViewOrder\MyOrder.g.cshtml.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorTargetAssemblyInfo.cache
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorTargetAssemblyInfo.cs
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.Views.pdb
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.dll
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.pdb
+C:\Users\USER\Desktop\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.csproj.CopyComplete
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.deps.json
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.runtimeconfig.json
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.runtimeconfig.dev.json
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.dll
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.pdb
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.Views.dll
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\bin\Debug\netcoreapp2.1\TLCNWebApp.Views.pdb
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.csprojAssemblyReference.cache
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.csproj.CoreCompileInputs.cache
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorAssemblyInfo.cache
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorAssemblyInfo.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.AssemblyInfoInputs.cache
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.AssemblyInfo.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.TagHelpers.input.cache
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.TagHelpers.output.cache
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorCoreGenerate.cache
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\DanhMuc\Index.g.cshtml.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Error\Error401.g.cshtml.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Layout\_Admin.g.cshtml.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Layout\_User.g.cshtml.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Login\Index.g.cshtml.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\NhaXuatBan\Index.g.cshtml.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\QuanLyDonHang\Index.g.cshtml.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\QuanLyNhapSach\Index.g.cshtml.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\QuanLyQuanTriVien\Index.g.cshtml.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Sach\BookCreate.g.cshtml.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Sach\Index.g.cshtml.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\TacGia\Index.g.cshtml.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\Razor\Views\ViewOrder\MyOrder.g.cshtml.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorTargetAssemblyInfo.cache
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.RazorTargetAssemblyInfo.cs
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.Views.pdb
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.dll
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.pdb
+D:\Data\ASP.NET\Website bán sách sử dụng ASP.NET Core-15110291-14110188\CODE\TLCNWebApp\TLCNWebApp\obj\Debug\netcoreapp2.1\TLCNWebApp.csproj.CopyComplete
